@@ -189,7 +189,7 @@
       <a href="#" class="hover:scale-110 transition text-gray-300 hover:text-white"><i class="fa-brands fa-twitter"></i></a>
     </div>
 
-    <p class="text-sm opacity-60 text-gray-500">© 2025 Travel Luxury | Designed with 💎 Laravel + TailwindCSS</p>
+    <p class="text-sm opacity-60 text-gray-500">© 2025 Travel Luxury | Designed with Laravel + TailwindCSS</p>
   </div>
 </footer>
 

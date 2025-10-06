@@ -8,7 +8,30 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <style>
+        .mySwiper {
+            height: 480px !important;
+            /* ความสูงคงที่ที่เหมาะกับการ์ด */
+            overflow: hidden;
+        }
 
+        .mySwiper .swiper-wrapper {
+            align-items: stretch;
+        }
+
+        .mySwiper .swiper-slide {
+            height: auto !important;
+        }
+
+        .swiper-slide-shadow-left,
+        .swiper-slide-shadow-right {
+            background: rgba(0, 0, 0, 0.15) !important;
+            /* จากเดิม ~0.45 */
+            filter: blur(4px);
+        }
+    </style>
+
+    {{-- 🌟 Hero Section --}}
     <section
         class="relative w-full min-h-screen bg-gradient-to-b from-black via-neutral-900 to-black text-gray-100 py-24 overflow-hidden">
         {{-- Background Glow Effects --}}
@@ -66,13 +89,57 @@
             </div>
         </div>
 
-        {{-- Tours Grid --}}
-        <div class="relative z-10 px-6 md:px-16 max-w-[1400px] mx-auto rounded-2xl overflow-visible">
+        {{-- ✅ MOBILE (Swiper) --}}
+        <div class="block md:hidden relative z-10 px-4 w-full mx-auto rounded-2xl overflow-visible mb-16">
+            <div class="swiper mySwiper !overflow-visible h-[480px]"> {{-- 👈 บังคับความสูงคงที่ --}}
+                <div class="swiper-wrapper items-stretch">
+                    @foreach ($tours as $tour)
+                        <div class="swiper-slide h-full flex items-stretch px-2">
+                            <div
+                                class="tour-card h-full flex flex-col justify-between bg-gradient-to-br from-neutral-900/90 via-neutral-900/70 to-black/90 border border-neutral-800/50 rounded-3xl overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.4)] backdrop-blur-sm">
+                                {{-- 🖼️ Image Section --}}
+                                <div class="relative overflow-hidden h-60 rounded-2xl">
+                                    <img src="{{ asset($tour['image']) }}" alt="{{ $tour['name'] }}"
+                                        class="w-full h-full object-cover transition-transform duration-300" />
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent">
+                                    </div>
+                                </div>
+
+                                {{-- 📝 Content Section --}}
+                                <div class="p-6 flex flex-col justify-between flex-grow">
+                                    <div>
+                                        <h3
+                                            class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-amber-300 mb-2">
+                                            {{ $tour['name'] }}
+                                        </h3>
+                                        <p class="text-gray-400 text-sm mb-4 line-clamp-3">{{ $tour['description'] }}</p>
+                                    </div>
+
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-yellow-400 text-xl font-bold">{{ number_format($tour['price'], 0) }}
+                                            THB</p>
+                                        <a href="{{ route('tour.detail', $tour['id']) }}"
+                                            class="bg-gradient-to-r from-yellow-600 via-yellow-500 to-amber-600 text-black font-bold px-5 py-2 rounded-full shadow hover:shadow-lg transition">
+                                            Explore
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+                <div class="swiper-pagination mt-6"></div>
+            </div>
+        </div>
+
+
+        {{-- ✅ DESKTOP (Grid เดิม) --}}
+        <div class="hidden md:block relative z-10 px-6 md:px-16 max-w-[1400px] mx-auto rounded-2xl overflow-visible">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 @foreach ($tours as $index => $tour)
+                    {{-- ใช้การ์ดเดิมทั้งหมดของคุณ --}}
                     <div class="tour-card fade-up opacity-0 translate-y-12 scale-95 [transition:all_0.7s_cubic-bezier(0.34,1.56,0.64,1)] group bg-gradient-to-br from-neutral-900/90 via-neutral-900/70 to-black/90 border border-neutral-800/50 rounded-3xl overflow-hidden shadow-[0_10px_50px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_60px_rgba(212,175,55,0.3)] hover:scale-[1.02] flex flex-col backdrop-blur-sm"
                         data-index="{{ $index }}">
-
                         {{-- 🖼️ Image Section --}}
                         <div class="relative overflow-hidden h-72 rounded-2xl">
                             <div class="absolute inset-0 shimmer z-10"></div>
@@ -197,8 +264,10 @@
             </div>
         </div>
 
+
+
         {{-- Footer Info --}}
-        <div class="text-center mt-20 relative z-10 animate-fade-up [animation-delay:0.8s] rounded-2xl overflow-hidden">
+        <div class="text-center mt-20 relative z-[50] animate-fade-up [animation-delay:0.8s] rounded-2xl overflow-visible">
             <p class="text-gray-500 text-sm mb-4">สนใจปรึกษาแพ็กเกจส่วนตัว?</p>
             <button
                 class="text-yellow-400 font-semibold hover:text-yellow-300 transition-colors duration-300 flex items-center gap-2 mx-auto group">
