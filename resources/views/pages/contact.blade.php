@@ -23,7 +23,7 @@
       ติดต่อเรา
     </h1>
 
-    <p class="text-gray-300 max-w-2xl mx-auto text-lg mb-16 font-[Inter]">
+    <p class="text-gray-300 max-w-2xl mx-auto text-lg mb-16">
       ต้องการสอบถามข้อมูลเพิ่มเติม หรือติดต่อจองแพ็กเกจทัวร์สุดหรูกับเรา<br class="hidden sm:block">
       ติดต่อผ่านช่องทางด้านล่างได้ทุกเวลา ทีมงานพร้อมให้บริการด้วยใจ
     </p>
@@ -42,7 +42,7 @@
           </svg>
         </div>
         <h3 class="text-xl font-semibold text-yellow-400 mb-2">โทรศัพท์</h3>
-        <p class="text-gray-300 text-base font-[Inter]">099-999-9999</p>
+        <p class="text-gray-300 text-base ">099-999-9999</p>
       </div>
 
       {{-- อีเมล --}}
@@ -57,7 +57,7 @@
           </svg>
         </div>
         <h3 class="text-xl font-semibold text-yellow-400 mb-2">อีเมล</h3>
-        <p class="text-gray-300 text-base font-[Inter]">info@travelluxury.com</p>
+        <p class="text-gray-300 text-base ">info@travelluxury.com</p>
       </div>
 
       {{-- ที่อยู่ --}}
@@ -72,7 +72,7 @@
           </svg>
         </div>
         <h3 class="text-xl font-semibold text-yellow-400 mb-2">ที่อยู่</h3>
-        <p class="text-gray-300 text-base font-[Inter]">123 ถนนสุขุมวิท กรุงเทพฯ</p>
+        <p class="text-gray-300 text-base ">123 ถนนสุขุมวิท กรุงเทพฯ</p>
       </div>
     </div>
 
