@@ -7,7 +7,12 @@ export default defineConfig({
   base: '',
   plugins: [
     laravel({
-      input: ['resources/css/app.css', 'resources/js/app.js'],
+      input: [
+                'resources/css/app.css',
+                'resources/js/app.js',
+                'resources/js/home.js',    
+                'resources/js/tour-detail.js'
+            ],
       refresh: true,
     }),
     visualizer({

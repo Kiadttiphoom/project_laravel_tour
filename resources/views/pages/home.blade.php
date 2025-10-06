@@ -79,13 +79,6 @@
             class="absolute top-1/3 right-1/3 w-[400px] h-[400px] bg-gradient-to-bl from-amber-600/20 via-yellow-500/10 to-transparent rounded-full blur-3xl animate-bounce [animation-duration:6s]">
         </div>
 
-        {{-- Decorative Lines --}}
-        <div
-            class="absolute top-20 left-10 w-32 h-0.5 bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent animate-pulse">
-        </div>
-        <div
-            class="absolute bottom-20 right-10 w-32 h-0.5 bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent animate-pulse">
-        </div>
 
         {{-- Hero Section --}}
         <div class="text-center mb-20 relative z-10 px-4 rounded-2xl overflow-hidden">

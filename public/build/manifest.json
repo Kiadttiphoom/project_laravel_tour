@@ -1,4 +1,8 @@
 {
+  "_autoplay-D_V9HhOf.js": {
+    "file": "assets/autoplay-D_V9HhOf.js",
+    "name": "autoplay"
+  },
   "resources/css/app.css": {
     "file": "assets/app-DfeOZcdU.css",
     "src": "resources/css/app.css",
@@ -12,5 +16,29 @@
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true
+  },
+  "resources/js/home.js": {
+    "file": "assets/home-CuBSi8dW.js",
+    "name": "home",
+    "src": "resources/js/home.js",
+    "isEntry": true,
+    "imports": [
+      "_autoplay-D_V9HhOf.js"
+    ],
+    "css": [
+      "assets/home-C8ec8cn4.css"
+    ]
+  },
+  "resources/js/tour-detail.js": {
+    "file": "assets/tour-detail-BckPfsOO.js",
+    "name": "tour-detail",
+    "src": "resources/js/tour-detail.js",
+    "isEntry": true,
+    "imports": [
+      "_autoplay-D_V9HhOf.js"
+    ],
+    "css": [
+      "assets/tour-detail-DDQ4uUkz.css"
+    ]
   }
 }
