@@ -154,7 +154,7 @@
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             {{-- โลโก้ --}}
             <a href="{{ route('home') }}"
-                class="flex items-center space-x-2 text-yellow-400 font-[Playfair_Display] text-2xl tracking-wide">
+                class="flex items-center space-x-2 text-yellow-400 text-2xl tracking-wide">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-yellow-500" fill="none"
                     viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -230,7 +230,7 @@
         <div class="relative z-10 container mx-auto px-6 text-center">
             <div class="mb-6">
                 <h3
-                    class="text-2xl font-[Playfair_Display] text-gray-200 flex justify-center items-center space-x-2 mb-1">
+                    class="text-2xl text-gray-200 flex justify-center items-center space-x-2 mb-1">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-gray-300" fill="none"
                         viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round"

@@ -14,7 +14,7 @@
 
   <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
     {{-- 🏆 หัวข้อ --}}
-    <h1 class="text-4xl md:text-5xl font-[Playfair_Display] font-bold text-yellow-400 mb-6 flex items-center justify-center gap-3">
+    <h1 class="text-4xl md:text-5xl font-bold text-yellow-400 mb-6 flex items-center justify-center gap-3">
       <svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9 text-yellow-500" fill="none" viewBox="0 0 24 24"
         stroke-width="2" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round"
@@ -41,7 +41,7 @@
               d="M4.5 6.75l7.5 5.25L19.5 6.75" />
           </svg>
         </div>
-        <h3 class="text-xl font-semibold text-yellow-400 mb-2 font-[Playfair_Display]">โทรศัพท์</h3>
+        <h3 class="text-xl font-semibold text-yellow-400 mb-2">โทรศัพท์</h3>
         <p class="text-gray-300 text-base font-[Inter]">099-999-9999</p>
       </div>
 
@@ -56,7 +56,7 @@
               d="M3.75 6.75l8.25 6 8.25-6" />
           </svg>
         </div>
-        <h3 class="text-xl font-semibold text-yellow-400 mb-2 font-[Playfair_Display]">อีเมล</h3>
+        <h3 class="text-xl font-semibold text-yellow-400 mb-2">อีเมล</h3>
         <p class="text-gray-300 text-base font-[Inter]">info@travelluxury.com</p>
       </div>
 
@@ -71,14 +71,14 @@
               d="M12 2.25c4.97 0 9 4.03 9 9 0 7.125-9 10.5-9 10.5S3 18.375 3 11.25c0-4.97 4.03-9 9-9z" />
           </svg>
         </div>
-        <h3 class="text-xl font-semibold text-yellow-400 mb-2 font-[Playfair_Display]">ที่อยู่</h3>
+        <h3 class="text-xl font-semibold text-yellow-400 mb-2">ที่อยู่</h3>
         <p class="text-gray-300 text-base font-[Inter]">123 ถนนสุขุมวิท กรุงเทพฯ</p>
       </div>
     </div>
 
     {{-- 🗺️ แผนที่ --}}
     <div class="mt-20">
-      <h2 class="text-2xl font-[Playfair_Display] text-yellow-400 mb-8 flex items-center justify-center gap-3">
+      <h2 class="text-2xl text-yellow-400 mb-8 flex items-center justify-center gap-3">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-yellow-500" fill="none" viewBox="0 0 24 24"
           stroke-width="2" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round"
