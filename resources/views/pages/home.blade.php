@@ -67,7 +67,7 @@
         </div>
 
         {{-- Tours Grid --}}
-        <div class="relative z-10 px-6 md:px-16 max-w-[1400px] mx-auto rounded-2xl overflow-hidden">
+        <div class="relative z-10 px-6 md:px-16 max-w-[1400px] mx-auto rounded-2xl overflow-visible">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 @foreach ($tours as $index => $tour)
                     <div class="tour-card fade-up opacity-0 translate-y-12 scale-95 [transition:all_0.7s_cubic-bezier(0.34,1.56,0.64,1)] group bg-gradient-to-br from-neutral-900/90 via-neutral-900/70 to-black/90 border border-neutral-800/50 rounded-3xl overflow-hidden shadow-[0_10px_50px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_60px_rgba(212,175,55,0.3)] hover:scale-[1.02] flex flex-col backdrop-blur-sm"
