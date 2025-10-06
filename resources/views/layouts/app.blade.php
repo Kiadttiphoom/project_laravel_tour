@@ -5,9 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>@yield('title', 'Travel Luxury')</title>
-
-  {{-- ✅ TailwindCSS --}}
-  <script src="https://cdn.tailwindcss.com"></script>
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -96,7 +94,7 @@
   </style>
 </head>
 
-<body class="bg-gradient-to-b from-neutral-950 via-black to-neutral-900 text-gray-100 flex flex-col min-h-screen">
+<body class="text-[#e5e5e5] font-[IBM_Plex_Sans_Thai] bg-gradient-to-b from-neutral-950 via-black to-neutral-900 text-gray-100 flex flex-col min-h-screen">
 
   {{-- 🌑 Navbar --}}
   <nav class="glass-dark fixed w-full top-0 z-50 shadow-[0_0_25px_rgba(212,175,55,0.15)] border-b border-neutral-800">
@@ -144,7 +142,7 @@
       alt="hero" class="absolute inset-0 w-full h-full object-cover brightness-50">
     <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-neutral-900/40 to-black/80"></div>
     <div class="relative z-10 px-6 fade-in">
-      <h1 class="text-5xl md:text-7xl font-[Playfair_Display] font-bold text-yellow-400 mb-6 drop-shadow-xl">
+      <h1 class="text-5xl md:text-7xl font-bold text-yellow-400 mb-6 drop-shadow-xl">
         สัมผัสการเดินทางเหนือระดับ
       </h1>
       <p class="text-lg md:text-2xl mb-8 text-gray-200 opacity-95 max-w-2xl mx-auto">
@@ -155,7 +153,9 @@
           stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 19.5l8.485-8.485a2.121 2.121 0 00-3-3L12 9.515l-5.485-1.5a2.121 2.121 0 00-3 3L12 19.5z" />
         </svg>
+        <p class="text-lg font-semibold">
         สำรวจแพ็กเกจ
+        </p>
       </a>
     </div>
   </section>
@@ -167,31 +167,32 @@
   </main>
 
   {{-- 🌌 Footer --}}
-  <footer class="relative bg-gradient-to-b from-black via-neutral-900 to-black text-gray-400 py-12 mt-8 border-t border-neutral-800 overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-r from-yellow-900/10 via-transparent to-yellow-900/10 blur-2xl"></div>
-    <div class="relative z-10 container mx-auto px-6 text-center">
-      <div class="mb-6">
-        <h3 class="text-2xl font-[Playfair_Display] text-yellow-400 flex justify-center items-center space-x-2 mb-1">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke-width="2"
-            stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M12 3c4.97 0 9 4.03 9 9 0 4.97-4.03 9-9 9S3 16.97 3 12c0-4.97 4.03-9 9-9Z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18M3 12h18" />
-          </svg>
-          <span>Travel Luxury</span>
-        </h3>
-        <p class="text-sm opacity-80">สร้างสรรค์การเดินทางเหนือระดับ เพื่อคุณเท่านั้น</p>
-      </div>
-
-      <div class="flex justify-center space-x-8 mb-8">
-        <a href="#" class="hover:scale-110 transition text-yellow-400"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#" class="hover:scale-110 transition text-yellow-400"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#" class="hover:scale-110 transition text-yellow-400"><i class="fa-brands fa-twitter"></i></a>
-      </div>
-
-      <p class="text-sm opacity-70">© 2025 Travel Luxury | Designed with 💎 Laravel + TailwindCSS</p>
+  <footer class="relative bg-gradient-to-b from-black via-neutral-950 to-black text-gray-400 py-12 border-t border-neutral-800 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-r from-gray-800/10 via-transparent to-gray-800/10 blur-2xl"></div>
+  <div class="relative z-10 container mx-auto px-6 text-center">
+    <div class="mb-6">
+      <h3 class="text-2xl font-[Playfair_Display] text-gray-200 flex justify-center items-center space-x-2 mb-1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-gray-300" fill="none" viewBox="0 0 24 24" stroke-width="2"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M12 3c4.97 0 9 4.03 9 9 0 4.97-4.03 9-9 9S3 16.97 3 12c0-4.97 4.03-9 9-9Z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18M3 12h18" />
+        </svg>
+        <span>Travel Luxury</span>
+      </h3>
+      <p class="text-sm opacity-70 text-gray-400">สร้างสรรค์การเดินทางเหนือระดับ เพื่อคุณเท่านั้น</p>
     </div>
-  </footer>
+
+    <div class="flex justify-center space-x-8 mb-8">
+      <a href="#" class="hover:scale-110 transition text-gray-300 hover:text-white"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#" class="hover:scale-110 transition text-gray-300 hover:text-white"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" class="hover:scale-110 transition text-gray-300 hover:text-white"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+
+    <p class="text-sm opacity-60 text-gray-500">© 2025 Travel Luxury | Designed with 💎 Laravel + TailwindCSS</p>
+  </div>
+</footer>
+
 
   {{-- 📱 Script --}}
   <script>
