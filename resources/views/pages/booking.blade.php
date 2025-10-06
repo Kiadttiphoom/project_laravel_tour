@@ -43,117 +43,59 @@
                 </div>
 
                 {{-- Form --}}
+                {{-- Form --}}
                 <form class="space-y-8">
+                    {{-- input group --}}
+                    @php
+                        $inputClass = 'w-full bg-neutral-900/80 border border-neutral-700 text-gray-200 placeholder-gray-400 
+        rounded-xl p-4 ps-12 focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none 
+        transition duration-300 ease-in-out shadow-[0_0_15px_rgba(0,0,0,0.4)]';
+                    @endphp
+
                     {{-- ชื่อ-นามสกุล --}}
                     <div class="space-y-2">
-                        <label class="block text-sm font-semibold text-yellow-400 tracking-wide">ชื่อ-นามสกุล</label>
-                        <div class="relative">
-                            <input type="text" placeholder="กรอกชื่อของคุณ"
-                                class="w-full bg-neutral-800/70 border border-neutral-700 text-gray-200 placeholder-gray-400 rounded-xl p-4 ps-12 focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition duration-300 ease-in-out" />
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-yellow-400 opacity-70"
-                                fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M15.75 7.5a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 19.5a8.25 8.25 0 1115 0H4.5z" />
-                            </svg>
-                        </div>
+                        <label class="block text-sm font-semibold text-yellow-400">ชื่อ-นามสกุล</label>
+                        <input type="text" placeholder="กรอกชื่อของคุณ" class="{{ $inputClass }}">
                     </div>
 
                     {{-- อีเมล --}}
                     <div class="space-y-2">
-                        <label class="block text-sm font-semibold text-yellow-400 tracking-wide">อีเมล</label>
-                        <div class="relative">
-                            <input type="email" placeholder="example@email.com"
-                                class="w-full bg-neutral-800/70 border border-neutral-700 text-gray-200 placeholder-gray-400 rounded-xl p-4 ps-12 focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition duration-300 ease-in-out" />
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-yellow-400 opacity-70"
-                                fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15A2.25 2.25 0 012.25 17.25V6.75A2.25 2.25 0 014.5 4.5h15a2.25 2.25 0 012.25 2.25zm-17.25 0l7.5 6 7.5-6" />
-                            </svg>
-                        </div>
+                        <label class="block text-sm font-semibold text-yellow-400">อีเมล</label>
+                        <input type="email" placeholder="example@email.com" class="{{ $inputClass }}">
                     </div>
 
                     {{-- เบอร์โทร --}}
                     <div class="space-y-2">
-                        <label class="block text-sm font-semibold text-yellow-400 tracking-wide">เบอร์โทรศัพท์</label>
-                        <div class="relative">
-                            <input type="tel" placeholder="08xxxxxxxx"
-                                class="w-full bg-neutral-800/70 border border-neutral-700 text-gray-200 placeholder-gray-400 rounded-xl p-4 ps-12 focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition duration-300 ease-in-out" />
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-yellow-400 opacity-70"
-                                fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M2.25 6.75C2.25 4.679 3.929 3 6 3h1.5a.75.75 0 01.75.75v2.25a.75.75 0 01-.75.75H6a.75.75 0 00-.75.75v9a.75.75 0 00.75.75h1.5a.75.75 0 01.75.75V21a.75.75 0 01-.75.75H6a3.75 3.75 0 01-3.75-3.75V6.75zm15.75 0A.75.75 0 0118.75 6h1.5a3.75 3.75 0 013.75 3.75v8.25a3.75 3.75 0 01-3.75 3.75h-1.5a.75.75 0 01-.75-.75v-2.25a.75.75 0 01.75-.75h1.5a.75.75 0 00.75-.75V9.75a.75.75 0 00-.75-.75h-1.5a.75.75 0 01-.75-.75V6.75z" />
-                            </svg>
-                        </div>
+                        <label class="block text-sm font-semibold text-yellow-400">เบอร์โทรศัพท์</label>
+                        <input type="tel" placeholder="08xxxxxxxx" class="{{ $inputClass }}">
                     </div>
 
                     {{-- วันที่เดินทาง --}}
                     <div class="space-y-2">
-                        <label class="block text-sm font-semibold text-yellow-400 tracking-wide">วันที่เดินทาง</label>
-                        <div class="relative">
-                            <input type="date"
-                                class="w-full bg-neutral-800/70 border border-neutral-700 text-gray-200 rounded-xl p-4 ps-12 focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition duration-300 ease-in-out [color-scheme:dark]" />
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-yellow-400 opacity-70"
-                                fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M8.25 6.75v-1.5M15.75 6.75v-1.5M3 9.75h18M4.5 6.75A2.25 2.25 0 016.75 4.5h10.5A2.25 2.25 0 0119.5 6.75v12A2.25 2.25 0 0117.25 21H6.75A2.25 2.25 0 014.5 18.75v-12z" />
-                            </svg>
-                        </div>
+                        <label class="block text-sm font-semibold text-yellow-400">วันที่เดินทาง</label>
+                        <input type="date" class="{{ $inputClass }} [color-scheme:dark]">
                     </div>
 
                     {{-- จำนวนผู้เดินทาง --}}
                     <div class="space-y-2">
-                        <label class="block text-sm font-semibold text-yellow-400 tracking-wide">จำนวนผู้เดินทาง</label>
-                        <div class="relative">
-                            <select
-                                class="w-full bg-neutral-800/70 border border-neutral-700 text-gray-300 rounded-xl p-4 ps-12 focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition duration-300 ease-in-out appearance-none [color-scheme:dark]">
-                                <option value="" disabled selected class="text-gray-400">เลือกจำนวน...</option>
-                                @for ($i = 1; $i <= 10; $i++)
-                                    <option class="text-gray-200">{{ $i }} คน</option>
-                                @endfor
-                            </select>
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-yellow-400 opacity-70 pointer-events-none"
-                                fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M12 14.25l3-3m-3 3l-3-3m3 3V6.75m0 7.5V17.25" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-yellow-400 opacity-70 pointer-events-none"
-                                fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                            </svg>
-                        </div>
+                        <label class="block text-sm font-semibold text-yellow-400">จำนวนผู้เดินทาง</label>
+                        <select class="{{ $inputClass }} appearance-none [color-scheme:dark]">
+                            <option value="" disabled selected class="text-gray-400">เลือกจำนวน...</option>
+                            @for ($i = 1; $i <= 10; $i++)
+                                <option class="text-gray-200 bg-neutral-900">{{ $i }} คน</option>
+                            @endfor
+                        </select>
                     </div>
 
                     {{-- ปุ่ม --}}
                     <div class="flex flex-col md:flex-row justify-center gap-6 pt-8">
-                        <a href="{{ route('tour.detail', ['id' => $tour['id']]) }}"
-                            class="flex items-center justify-center gap-3 backdrop-blur-xl bg-neutral-900/70 border border-white/10 text-gray-300 px-10 py-4 rounded-2xl hover:bg-neutral-700/50 hover:text-yellow-300 hover:border-yellow-500/50 transition-all duration-300 group">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-300"
-                                fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-                            </svg>
-                            <span class="font-semibold">ย้อนกลับ</span>
-                        </a>
+                        <x-button text="ย้อนกลับ" icon="back" variant="secondary"
+                            href="{{ route('tour.detail', ['id' => $tour['id']]) }}" />
+                        <x-button text="ส่งคำขอจอง" icon="check" variant="primary" />
 
-                        <button type="button"
-                            class="group relative flex items-center justify-center gap-3 bg-gradient-to-r from-yellow-600 via-yellow-500 to-amber-600 text-black font-bold px-10 py-4 rounded-2xl shadow-[0_0_30px_rgba(212,175,55,0.5)] hover:shadow-[0_0_50px_rgba(212,175,55,0.8)] transition-all duration-300 uppercase tracking-widest overflow-hidden">
-                            <span
-                                class="absolute inset-0 bg-gradient-to-r from-amber-500 to-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 relative z-10" fill="none"
-                                viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <span class="relative z-10">ส่งคำขอจอง</span>
-                        </button>
                     </div>
                 </form>
+
             </div>
         </div>
     </section>

@@ -311,28 +311,8 @@
                                 </div>
 
                                 <div class="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
-                                    <a href="{{ route('booking.page', ['id' => $tour['id']]) }}"
-                                        class="group relative flex items-center justify-center gap-3 bg-gradient-to-r from-yellow-600 via-yellow-500 to-amber-600 text-black font-bold px-10 py-5 rounded-2xl shadow-[0_0_30px_rgba(212,175,55,0.5)] hover:shadow-[0_0_50px_rgba(212,175,55,0.8)] transition-all duration-300 uppercase tracking-widest overflow-hidden">
-                                        <span
-                                            class="absolute inset-0 bg-gradient-to-r from-amber-500 to-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 relative z-10"
-                                            fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 010 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 010-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375z" />
-                                        </svg>
-                                        <span class="relative z-10">จองทัวร์นี้</span>
-                                    </a>
-
-                                    <a href="{{ route('home') }}"
-                                        class="flex items-center justify-center gap-3 backdrop-blur-xl bg-neutral-900/70 border border-white/10 text-gray-300 px-10 py-5 rounded-2xl hover:bg-neutral-700/50 hover:text-yellow-300 hover:border-yellow-500/50 transition-all duration-300 group">
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                            class="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-300"
-                                            fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M15.75 19.5L8.25 12l7.5-7.5" />
-                                        </svg>
-                                        <span class="font-semibold">ย้อนกลับ</span>
-                                    </a>
+                                    <x-button text="ส่งคำขอจอง" icon="ticket" variant="primary" href="{{ route('booking.page', ['id' => $tour['id']]) }}"/>
+                                    <x-button text="ย้อนกลับ" icon="back"  variant="secondary" href="{{ route('home') }}" />
                                 </div>
                             </div>
                         </div>
