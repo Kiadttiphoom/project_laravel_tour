@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-class ContactController extends Controller
+class AboutController extends Controller
 {
     public function page()
     {
-         return view('pages.contact');
+         return view('pages.about');
     }
 }
