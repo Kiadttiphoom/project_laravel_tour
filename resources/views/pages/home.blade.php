@@ -165,18 +165,24 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 @foreach ($tours as $index => $tour)
                     {{-- ใช้การ์ดเดิมทั้งหมดของคุณ --}}
-                    <div class="tour-card fade-up opacity-0 translate-y-12 scale-95 [transition:all_0.7s_cubic-bezier(0.34,1.56,0.64,1)] group bg-gradient-to-br from-neutral-900/90 via-neutral-900/70 to-black/90 border border-neutral-800/50 rounded-3xl overflow-hidden shadow-[0_10px_50px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_60px_rgba(212,175,55,0.3)] hover:scale-[1.02] flex flex-col backdrop-blur-sm"
+                    <div class="tour-card fade-up opacity-0 translate-y-12 scale-95 
+                        [transition:all_0.7s_cubic-bezier(0.34,1.56,0.64,1)] group 
+                        bg-gradient-to-br from-neutral-900/90 via-neutral-900/70 to-black/90 
+                        border border-neutral-800/50 rounded-3xl overflow-hidden 
+                        hover:-translate-y-1 hover:shadow-2xl 
+                        flex flex-col
+                        [transform:translateZ(0)] [backface-visibility:hidden] will-change-transform"
                         data-index="{{ $index }}">
                         {{-- 🖼️ Image Section --}}
                         <div class="relative overflow-hidden h-72 rounded-2xl">
                             <div class="absolute inset-0 shimmer z-10"></div>
                             <img src="{{ asset($tour['image']) }}" alt="{{ $tour['name'] }}"
                                 class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                            <div class="absolute inset-0"></div>
 
                             {{-- Luxury Badge --}}
                             <div
-                                class="absolute top-6 right-6 backdrop-blur-md bg-gradient-to-br from-yellow-600/90 to-amber-700/90 px-4 py-2 rounded-full flex items-center gap-2 shadow-xl">
+                                class="absolute top-6 right-6 bg-gradient-to-br from-yellow-600/90 to-amber-700/90 px-4 py-2 rounded-full flex items-center gap-2 shadow-xl">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="currentColor"
                                     viewBox="0 0 24 24">
                                     <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z" />
@@ -186,7 +192,7 @@
 
                             {{-- Rating --}}
                             <div
-                                class="absolute top-6 left-6 backdrop-blur-xl bg-neutral-900/60 px-3 py-2 rounded-lg flex items-center gap-1 transition-opacity duration-300 ease-in-out">
+                                class="absolute top-6 left-6 bg-neutral-900/60 px-3 py-2 rounded-lg flex items-center gap-1 transition-opacity duration-300 ease-in-out">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-yellow-400" fill="currentColor"
                                     viewBox="0 0 24 24">
                                     <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z" />
@@ -197,7 +203,7 @@
                             {{-- Hover Info Overlay --}}
                             <div
                                 class="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 pointer-events-none">
-                                <div class="backdrop-blur-xl bg-neutral-900/60 rounded-xl p-4 space-y-2">
+                                <div class="bg-neutral-900/60 rounded-xl p-4 space-y-2">
                                     <div
                                         class="flex items-center gap-3 text-sm text-white opacity-0 -translate-x-5 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-400 [transition-delay:0.1s]">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-yellow-400"
