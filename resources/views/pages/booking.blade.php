@@ -48,7 +48,8 @@
                     {{-- ชื่อ-นามสกุล --}}
                     <div class="space-y-2">
                         <label class="block text-sm font-semibold text-yellow-400">ชื่อ-นามสกุล</label>
-                        <div class="relative">
+                        <div class="relative flex items-center">
+                            <i class="fas fa-user absolute pl-4 left-4 text-yellow-400 pointer-events-none"></i>
                             <input type="text" name="fullname" placeholder="กรอกชื่อของคุณ"
                                 class="w-full bg-neutral-900/80 border border-neutral-700 text-gray-200 placeholder-gray-400 
 rounded-xl p-4 ps-12 focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none 
@@ -59,8 +60,8 @@ transition duration-300 ease-in-out shadow-[0_0_15px_rgba(0,0,0,0.4)] leading-no
                     {{-- อีเมล --}}
                     <div class="space-y-2">
                         <label class="block text-sm font-semibold text-yellow-400">อีเมล</label>
-                        <div class="relative">
-
+                        <div class="relative flex items-center">
+                            <i class="fas fa-envelope absolute pl-4 left-4 text-yellow-400 pointer-events-none"></i>
                             <input type="email" name="email" placeholder="example@email.com"
                                 class="w-full bg-neutral-900/80 border border-neutral-700 text-gray-200 placeholder-gray-400 
 rounded-xl p-4 ps-12 focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none 
@@ -71,7 +72,8 @@ transition duration-300 ease-in-out shadow-[0_0_15px_rgba(0,0,0,0.4)] leading-no
                     {{-- เบอร์โทร --}}
                     <div class="space-y-2">
                         <label class="block text-sm font-semibold text-yellow-400">เบอร์โทรศัพท์</label>
-                        <div class="relative">
+                        <div class="relative flex items-center">
+                            <i class="fas fa-phone absolute pl-4 left-4 text-yellow-400 pointer-events-none"></i>
                             <input type="tel" name="phone" placeholder="08xxxxxxxx"
                                 class="w-full bg-neutral-900/80 border border-neutral-700 text-gray-200 placeholder-gray-400 
 rounded-xl p-4 ps-12 focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none 
@@ -82,7 +84,8 @@ transition duration-300 ease-in-out shadow-[0_0_15px_rgba(0,0,0,0.4)] leading-no
                     {{-- วันที่เดินทาง --}}
                     <div class="space-y-2 relative">
                         <label class="block text-sm font-semibold text-yellow-400">วันที่เดินทาง</label>
-                        <div class="relative">
+                        <div class="relative flex items-center">
+                            <i class="fas fa-calendar absolute pl-4 left-4 text-yellow-400 pointer-events-none"></i>
                             <input type="text" id="dateInput" name="travel_date" readonly
                                 placeholder="เลือกวันที่เดินทาง"
                                 class="w-full bg-neutral-900/80 border border-neutral-700 text-gray-200 placeholder-gray-400 
@@ -97,20 +100,12 @@ transition duration-300 ease-in-out shadow-[0_0_15px_rgba(0,0,0,0.4)] leading-no
                             <div class="flex items-center justify-between mb-4">
                                 <button type="button" id="prevMonth"
                                     class="p-2 hover:bg-neutral-800 rounded-lg transition-colors">
-                                    <svg class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M15 19l-7-7 7-7" />
-                                    </svg>
+                                    <svg class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5l-7 7 7 7" /> </svg>
                                 </button>
                                 <h3 id="currentMonth" class="text-lg font-semibold text-yellow-400"></h3>
                                 <button type="button" id="nextMonth"
                                     class="p-2 hover:bg-neutral-800 rounded-lg transition-colors">
-                                    <svg class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9 5l7 7-7 7" />
-                                    </svg>
+                                    <svg class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /> </svg> 
                                 </button>
                             </div>
 
@@ -133,7 +128,8 @@ transition duration-300 ease-in-out shadow-[0_0_15px_rgba(0,0,0,0.4)] leading-no
                     {{-- จำนวนผู้เดินทาง --}}
                     <div class="space-y-2">
                         <label class="block text-sm font-semibold text-yellow-400">จำนวนผู้เดินทาง</label>
-                        <div class="relative">
+                        <div class="relative flex items-center">
+                            <i class="fas fa-users absolute pl-4 left-4 text-yellow-400 pointer-events-none"></i>
                             <select name="travelers"
                                 class="w-full bg-neutral-900/80 border border-neutral-700 text-gray-200 placeholder-gray-400 
 rounded-xl p-4 ps-12 focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none 

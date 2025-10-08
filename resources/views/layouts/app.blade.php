@@ -7,6 +7,7 @@
     <title>@yield('title', 'Travel Luxury')</title>
     {{-- ✅ โหลดไฟล์หลักทุกหน้า --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     {{-- ✅ โหลด JS เพิ่มเฉพาะหน้าที่ต้องใช้ --}}
     @if (Request::is('/') || Request::is('home'))
