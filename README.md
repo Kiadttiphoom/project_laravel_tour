@@ -18,29 +18,36 @@
 - 📱 **Fully responsive** for all devices
 - ⚙️ Built with **Laravel 11** + **TailwindCSS 3**
 - 🗺️ Includes 5+ ready-made pages:
-  - Home
-  - Tour details
-  - Booking form
-  - About us
+  - Home  
+  - Tour details  
+  - Booking form  
+  - About us  
   - Contact us (with Google Maps)
-- 🎨 Beautiful hover effects & smooth transitions
-- 🌐 Ready for deployment on any Laravel host
+- 🎨 Beautiful hover effects & smooth transitions  
+- 🌐 Ready for deployment on any Laravel-compatible host
 
 ---
 
-## ⚙️ Installation
+## ⚙️ Installation Guide
 
 ```bash
-# Clone the project
+# 1️⃣ Clone the project
 git clone https://github.com/yourname/travel-luxury.git
 cd travel-luxury
 
-# Install dependencies
+# 2️⃣ Install dependencies
 npm install
 composer install
 
-# Build assets
+# 3️⃣ Copy the example environment file
+cp .env.example .env
+
+# 4️⃣ Generate your Laravel application key
+# (This is required to encrypt sessions and cookies)
+php artisan key:generate
+
+# 5️⃣ Build front-end assets
 npm run dev    # or npm run build for production
 
-# Start local server
+# 6️⃣ Start the local development server
 php artisan serve
