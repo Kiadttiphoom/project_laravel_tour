@@ -1,15 +1,25 @@
 FROM php:8.2-apache
 
-# Install system dependencies
+# Install dependencies
 RUN apt-get update && apt-get install -y \
     git unzip libzip-dev \
  && docker-php-ext-install zip \
  && a2enmod rewrite
 
-# Set working directory
+# 👉 ตั้ง DocumentRoot ไปที่ public
+ENV APACHE_DOCUMENT_ROOT=/var/www/html/public
+
+# 👉 แก้ Apache config + เปิด AllowOverride
+RUN sed -ri 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' \
+    /etc/apache2/sites-available/*.conf \
+ && sed -ri 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' \
+    /etc/apache2/apache2.conf \
+ && sed -ri 's/AllowOverride None/AllowOverride All/g' \
+    /etc/apache2/apache2.conf
+
 WORKDIR /var/www/html
 
-# Copy project files
+# Copy source
 COPY . /var/www/html
 
 # Permissions
